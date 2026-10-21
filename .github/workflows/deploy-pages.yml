@@ -1,0 +1,30 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⭐️ Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 📬 Set up CNAME
+        run: echo "ivy.hk" > CNAME
+
+      - name: 📦 Install dependencies (none needed - static site)
+        run: echo "No build step needed for static site"
+
+      - name: 🚀 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          keep_files: ''
+          enable_jekyll: false
+
+      - name: ✅ Confirm deployment
+        run: echo "Deployed to GitHub Pages"
