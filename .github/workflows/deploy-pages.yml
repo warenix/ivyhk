@@ -27,6 +27,8 @@ jobs:
           publish_dir: .
           keep_files: ''
           enable_jekyll: false
+          # Uncomment and add DEPLOY_TOKEN secret if GITHUB_TOKEN fails:
+          # personal_token: ${{ secrets.DEPLOY_TOKEN }}
 
       - name: ✅ Confirm deployment
         run: echo "Deployed to GitHub Pages"
