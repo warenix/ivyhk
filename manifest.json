@@ -1,21 +1,39 @@
 {
-  "name": "IVY.HK",
+  "name": "IVY.HK · 老婆生日快樂",
   "short_name": "IVY",
-  "start_url": "index.html",
+  "description": "接住蛋糕, 就有禮物收。",
+  "lang": "zh-HK",
+  "id": "/",
+  "start_url": "./index.html",
   "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7f1e0",
+  "theme_color": "#f7f1e0",
   "icons": [
     {
-      "src": "heart_192.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "src": "image/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     },
     {
-      "src": "heart.png",
+      "src": "image/heart_192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "image/heart_512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "image/icon_maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
-  ],
-  "theme_color": "#ff0000",
-  "background_color": "#000000",
-  "display": "standalone"
+  ]
 }
